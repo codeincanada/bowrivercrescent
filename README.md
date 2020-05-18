@@ -1,7 +1,7 @@
 # bow river crescent
 
 - **done** ~add React app~
-- Firebase hosting, auth, and db
+- **done** ~Firebase hosting, auth, and db~
 - Tests, code coverage (Istambul?)
 - TS and SCSS
 - Semantic, Commitzen
