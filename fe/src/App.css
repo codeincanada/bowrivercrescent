@@ -1,4 +1,5 @@
 .App {
+  background-image: url("images/1.png");
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
@@ -10,15 +11,7 @@
 }
 
 .App-main {
-  border: 1px solid white;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.App-main a {
-  color: white;
-  margin: 0;
+  //
 }
 
 .App-header {
