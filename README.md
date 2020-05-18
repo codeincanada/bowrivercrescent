@@ -1,6 +1,6 @@
 # bow river crescent
 
-- React app
+- **done** ~add React app~
 - Firebase hosting, auth, and db
 - Tests, code coverage (Istambul?)
 - TS and SCSS
