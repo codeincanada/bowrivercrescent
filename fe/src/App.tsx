@@ -76,7 +76,14 @@ function App() {
     return (
         <div className="App">
             <header className="App-header">
-                <h1>Welcome to the Bow River Crescent community!</h1>
+                <h1>Welcome to the <br/><span className="street-name-font"><span role="img"
+                                                                                 aria-label="map icon">🗺️</span>Bow River Crescent</span> community!
+                </h1>
+                <p>We would like to help our micro-society.
+                    <br/>Get in the loop by signing in here.
+                    <br/><small className="ps-font">PS: And you don't need a new set of username or password in your
+                        life, right?!</small>
+                </p>
             </header>
             <main id="firebaseui-auth-container" className="App-main">
                 <div id="loader">Loading...</div>
