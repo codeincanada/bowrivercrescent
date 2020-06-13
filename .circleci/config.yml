@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - save_cache:
           paths:
             - ~/usr/local/lib/node_modules
