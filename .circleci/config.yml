@@ -5,16 +5,14 @@ jobs:
       - image: 'circleci/node:latest'
     steps:
       - restore_cache:
-        keys:
-          # when lock file changes, use increasingly general patterns to restore cache
-          - node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-
+          keys:
+            # when lock file changes, use increasingly general patterns to restore cache
+            - node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - checkout
-
       - save_cache:
-        paths:
-          - ~/usr/local/lib/node_modules  # location depends on npm version
-        key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/usr/local/lib/node_modules  # location depends on npm version
+          key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: yarn
       - run: yarn release-ci
 workflows:
