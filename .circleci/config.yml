@@ -1,4 +1,5 @@
 version: 2.1
+# https://circleci.com/docs/2.0/configuration-reference/
 jobs:
   build:
     docker:
@@ -9,7 +10,6 @@ jobs:
       - checkout
       - save_cache:
           paths:
-            - ~/.cache/yarn
             - ~/usr/local/lib/node_modules
           key: yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: yarn
