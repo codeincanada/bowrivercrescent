@@ -4,9 +4,9 @@ jobs:
     docker:
       - image: 'circleci/node:latest'
     steps:
-      - restore_cache:
-          key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - checkout
+      - restore_cache:
+        key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - save_cache:
           paths:
             - ~/usr/local/lib/node_modules
