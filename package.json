@@ -27,7 +27,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "firebase deploy",
-    "release": "yarn build && yarn deploy"
+    "deploy-ci": "firebase deploy --token ${FIREBASE_TOKEN}",
+    "release": "yarn build && yarn deploy",
+    "release-ci": "yarn build && yarn deploy"
   },
   "eslintConfig": {
     "extends": "react-app"

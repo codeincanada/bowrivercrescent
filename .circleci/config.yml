@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: yarn
-      - run: yarn release
+      - run: yarn release-ci
 workflows:
   version: 2
   release:
