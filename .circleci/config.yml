@@ -7,11 +7,11 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-        key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - save_cache:
-        paths:
-          - ~/usr/local/lib/node_modules
-        key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/usr/local/lib/node_modules
+          key: yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: yarn
       - run: yarn release-ci
 workflows:
