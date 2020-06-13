@@ -8,8 +8,6 @@ jobs:
         keys:
           # when lock file changes, use increasingly general patterns to restore cache
           - node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          - node-v1-{{ .Branch }}-
-          - node-v1-
 
       - checkout
 
