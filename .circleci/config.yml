@@ -4,13 +4,14 @@ jobs:
     docker:
       - image: 'circleci/node:latest'
     steps:
-      - checkout
       - restore_cache:
-          key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - checkout
       - save_cache:
           paths:
+            - ~/.cache/yarn
             - ~/usr/local/lib/node_modules
-          key: node-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: yarn-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run: yarn
       - run: yarn release-ci
 workflows:

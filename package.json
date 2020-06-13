@@ -22,6 +22,7 @@
     "typescript": "~3.9.5"
   },
   "scripts": {
+    "bootstrap": "yarn --frozen-lockfile --cache-folder ~/.cache/yarn",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
