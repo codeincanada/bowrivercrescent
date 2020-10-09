@@ -14,7 +14,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/user-event": "^12.1.7",
     "@testing-library/react": "^11.0.4",
-    "firebase": "^7.22.1",
+    "firebase": "^7.23.0",
     "firebaseui": "^4.6.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
